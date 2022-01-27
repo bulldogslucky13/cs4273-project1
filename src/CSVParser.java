@@ -32,9 +32,11 @@ public class CSVParser {
 	public static void main(String[] args) {
 		List<List<String>> parsingResults = readCsv("letters.csv");
 		
-		ListIterator<List<String>> iterator = parsingResults.listIterator();
-		while(iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
+		// ListIterator<List<String>> iterator = parsingResults.listIterator();
+		// while(iterator.hasNext()) {
+		// 	System.out.println(iterator.next());
+		// }
+
+		System.out.println("This should fail");
 	}
 }

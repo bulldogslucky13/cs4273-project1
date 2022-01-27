@@ -12,7 +12,8 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class CSVParser {
-	public static List<List<String>> readCsv(String filename) {
+	// public static List<List<String>> readCsv(String filename) {
+		public static String readCsv(String filename) {
 		List<List<String>> parsedCsv = new ArrayList<>();
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 		    String line;
@@ -25,18 +26,21 @@ public class CSVParser {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+
+		return "This is a test";
 		
-		return parsedCsv;
+		// return parsedCsv;
 	}
 	
 	public static void main(String[] args) {
-		List<List<String>> parsingResults = readCsv("letters.csv");
+		// List<List<String>> parsingResults = readCsv("letters.csv");
+		String parsingResults = readCsv("letters.csv");
 		
 		// ListIterator<List<String>> iterator = parsingResults.listIterator();
 		// while(iterator.hasNext()) {
 		// 	System.out.println(iterator.next());
 		// }
 
-		System.out.println("This should fail");
+		System.out.println(parsingResults);
 	}
 }
